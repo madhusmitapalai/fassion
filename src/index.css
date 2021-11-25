@@ -39,7 +39,7 @@
 .carousel {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   display: block;
   z-index: 1;
   background-position: 70% center;
@@ -97,7 +97,7 @@
   width: 100%;
   height: 100%;
   padding: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .products .Cards {
@@ -111,13 +111,15 @@
 .products .Cards .card-img1 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images//offer1.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images//offer1.jpg);
-  height: 80vh;
+  height: 75vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .products .Cards .card-img1:hover {
@@ -128,13 +130,15 @@
 .products .Cards .card-img2 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images//offer2.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images//offer2.jpg);
-  height: 40vh;
+  height: 35vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .products .Cards .card-img2:hover {
@@ -145,7 +149,9 @@
 .products .Cards .card-img3 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images//offer3.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images//offer3.jpg);
-  height: 40vh;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  height: 35vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -162,13 +168,15 @@
 .products .Cards .card-img4 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(./images//offer4.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images//offer4.jpg);
-  height: 80vh;
+  height: 75vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .products .Cards .card-img4:hover {
@@ -188,7 +196,7 @@
 .card-container {
   padding: 2rem;
   text-transform: capitalize;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .card-container .card-1 {
@@ -223,8 +231,14 @@
 }
 
 /*girl*/
-.girl {
+.main-girl {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-girl .girl {
   color: #fff;
+  text-transform: uppercase;
   background-image: url(./images//lg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -232,21 +246,85 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.girl h1 {
+.main-girl .girl:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main-girl .girl h1 {
   text-align: center;
   padding: 2.5rem;
   font-weight: 700;
   font-size: 1.5rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
-.girl:hover {
-  -webkit-transform: translate3d(1.1);
-          transform: translate3d(1.1);
+.summer {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 2rem;
+  text-transform: capitalize;
+}
+
+.summer h2 {
+  color: #f55757;
+  font-weight: bold;
+  padding: 2rem;
+}
+
+.summer .imges {
+  width: 100%;
+  height: auto;
+}
+
+.summer .summer-content h1 {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.summer .summer-content p {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  padding: 0.5rem 1rem;
+}
+
+.contact {
+  text-transform: capitalize;
+}
+
+.contact h2 {
+  padding: 2rem;
+  color: #f55757;
+  font-weight: bold;
+}
+
+.contact .contact-info {
+  padding: 5rem 3rem;
+}
+
+.contact .contact-info p {
+  color: grey;
+}
+
+.contact .contact-info span {
+  display: block;
+  padding: 0.2rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/*footer*/
+.footer {
+  background-color: #f55757;
+  padding: 3rem;
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 450px) {
@@ -267,12 +345,22 @@
   .products {
     padding: 1.5rem 0;
   }
-  .products .card-img1, .products .card-img4 {
+  .products .card-img1,
+  .products .card-img4 {
     margin: 2rem 0;
   }
   .girl h1 {
     padding: 2.5rem 0;
     letter-spacing: 0;
+  }
+  .summer {
+    padding: 1rem 0;
+  }
+  .summer .summer-content h1 {
+    padding: 0.5rem 0;
+  }
+  .summer .summer-content p {
+    padding: 0.5rem 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

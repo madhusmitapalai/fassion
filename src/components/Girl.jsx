@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 const Girl = () => {
     return (
         <div>
-            <Container>
+            <Container className='main-girl'>
                 <div className='girl'>
                     <h1>uto 75% off springsale !</h1>
                 </div>

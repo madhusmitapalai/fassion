@@ -16,12 +16,12 @@ $color: rgb(245, 87, 87);
   width: 100vw;
   object-fit: cover;
 }
-@mixin  background1 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    object-fit: cover;
+@mixin background1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  object-fit: cover;
 }
 .Navbar .nav-items .nav-links {
   margin-right: 2.1rem;
@@ -49,14 +49,14 @@ $color: rgb(245, 87, 87);
 .carousel {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   display: block;
   z-index: 1;
   @include background();
   .img-div1 {
     background-image: url(./images//slide1.jpg);
     @include background();
-    display: block;;
+    display: block;
   }
   .img-div2 {
     background-image: url(./images//slide2.jpg);
@@ -82,8 +82,8 @@ $color: rgb(245, 87, 87);
 .products {
   width: 100%;
   height: 100%;
-padding: 2rem;
-overflow-x: hidden;
+  padding: 2rem;
+  overflow: hidden;
   .Cards {
     width: 100%;
     height: 100%;
@@ -93,98 +93,163 @@ overflow-x: hidden;
     .card-img1 {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(./images//offer1.jpg);
-      height: 80vh;
+      height: 75vh;
       @include background1();
-      &:hover{
+      transition: all 1s;
+      &:hover {
         transform: scale(1.1);
       }
     }
     .card-img2 {
-      background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(./images//offer2.jpg);
-        height: 40vh;
+      height: 35vh;
       @include background1();
-      &:hover{
+      transition: all 1s;
+      &:hover {
         transform: scale(1.1);
       }
     }
     .card-img3 {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(./images//offer3.jpg);
-        height: 40vh;
+      transition: all 1s;
+      height: 35vh;
       @include background1();
-      &:hover{
+      &:hover {
         transform: scale(1.1);
       }
     }
     .card-img4 {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(./images//offer4.jpg);
-      height: 80vh;
+      height: 75vh;
       @include background1();
-    &:hover{
-      transform: scale(1.1);
-    }}
+      transition: all 1s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
-  .product-content{
-position: absolute;
-top: 17rem;
-left: 2rem;
-      text-align:center;
-      padding: 2rem;
+  .product-content {
+    position: absolute;
+    top: 17rem;
+    left: 2rem;
+    text-align: center;
+    padding: 2rem;
   }
 }
 /*card container*/
-.card-container{
+.card-container {
   padding: 2rem;
   text-transform: capitalize;
-  overflow-x: hidden;
-  .card-1{
+  overflow: hidden;
+  .card-1 {
     border: none;
-  .card-content{
-    width: 100%;
-    height: 100%;
-    .h3{
-    font-size: 1rem;
-    display: block;
-    font-weight: 500;
+    
+    .card-content {
+      width: 100%;
+      height: 100%;
+      .h3 {
+        font-size: 1rem;
+        display: block;
+        font-weight: 500;
+      }
+      .para {
+        font-size: 0.9rem;
+        color: $color;
+        display: block;
+      }
+      .h2 {
+        font-family: 1.5rem;
+        display: block;
+        font-weight: 400;
+      }
+      & i {
+        padding: 0 0.3rem;
+      }
     }
-    .para{
-      font-size: 0.9rem;
-      color: $color;
-      display: block;
-    }
-    .h2{
-      font-family: 1.5rem;
-      display: block;
-      font-weight: 400;
-    }
-    & i{
-      padding:0 0.3rem;
-    }
-  }
   }
 }
 /*girl*/
-.girl{
+.main-girl {
+  position: relative;
+  overflow: hidden;
+  .girl {
+    color: #fff;
+    text-transform: uppercase;
+    background-image: url(./images//lg.jpg);
+    @include background1();
+    transition: all 1s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    & h1 {
+      text-align: center;
+      padding: 2.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}
+.summer {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 2rem;
+  text-transform: capitalize;
+  & h2 {
+    color: $color;
+    font-weight: bold;
+    padding: 2rem;
+  }
+  .imges {
+    width: 100%;
+    height: auto;
+  }
+  .summer-content {
+    & h1 {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+    & p {
+      font-size: 1rem;
+      letter-spacing: 0.05rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+.contact {
+  text-transform: capitalize;
+  & h2 {
+    padding: 2rem;
+    color: $color;
+    font-weight: bold;
+  }
+  .contact-info {
+    & p {
+      color: grey;
+    }
+    & span {
+      display: block;
+      padding: 0.2rem 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    padding: 5rem 3rem;
+  }
+}
+/*footer*/
+.footer{
+  background-color: $color;
+  padding: 3rem;
+  margin-top: 1rem;
   color: #fff;
-  background-image: url(./images//lg.jpg);
-  @include background1();
-  transition: all 300ms ease-in-out;
-   & h1{
-    text-align: center;
-  padding: 2.5rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: .2rem;
-  }
-  &:hover{
-    transform: translate3d(1.1);
-  }
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 @media (max-width: 450px) {
   .carousel {
-    
     & .Row {
       margin-bottom: 3rem;
       color: #000;
@@ -200,16 +265,28 @@ left: 2rem;
       }
     }
   }
-  .products{
-      padding:  1.5rem 0;
-      .card-img1,.card-img4{
-        margin: 2rem 0;
-      }
+  .products {
+    padding: 1.5rem 0;
+    .card-img1,
+    .card-img4 {
+      margin: 2rem 0;
+    }
   }
-  .girl{
-    & h1{
+  .girl {
+    & h1 {
       padding: 2.5rem 0;
       letter-spacing: 0;
+    }
+  }
+  .summer {
+    padding: 1rem 0;
+    .summer-content {
+      & h1 {
+        padding: 0.5rem 0;
+      }
+      & p {
+        padding: 0.5rem 0;
+      }
     }
   }
 }
