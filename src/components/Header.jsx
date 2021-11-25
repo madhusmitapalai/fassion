@@ -1,6 +1,4 @@
 import React from 'react'
-// import img1 from '../images/slide1.jpg'
-// import img2 from '../images/slide2.jpg'
 import { Carousel, Container,Row ,Col } from 'react-bootstrap';
 const Header = () => {
     return (

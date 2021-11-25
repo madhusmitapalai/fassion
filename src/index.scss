@@ -9,17 +9,19 @@
 $color: rgb(245, 87, 87);
 /*mixin*/
 @mixin background {
-  background-position: 100% center;
+  background-position: 70% center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 680px;
-  width: 100%;
+  width: 100vw;
+  object-fit: cover;
 }
 @mixin  background1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
+    object-fit: cover;
 }
 .Navbar .nav-items .nav-links {
   margin-right: 2.1rem;
@@ -45,19 +47,21 @@ $color: rgb(245, 87, 87);
   }
 }
 .carousel {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
+  display: block;
+  z-index: 1;
   @include background();
   .img-div1 {
     background-image: url(./images//slide1.jpg);
     @include background();
-    overflow-x: hidden;
+    display: block;;
   }
   .img-div2 {
     background-image: url(./images//slide2.jpg);
+    display: block;
     @include background();
-    overflow-x: hidden;
   }
   & .Row {
     margin-bottom: 8rem;
@@ -76,10 +80,10 @@ $color: rgb(245, 87, 87);
 }
 /*product section*/
 .products {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 padding: 2rem;
-display: block;
+overflow-x: hidden;
   .Cards {
     width: 100%;
     height: 100%;
@@ -130,11 +134,57 @@ left: 2rem;
       padding: 2rem;
   }
 }
+/*card container*/
+.card-container{
+  padding: 2rem;
+  text-transform: capitalize;
+  overflow-x: hidden;
+  .card-1{
+    border: none;
+  .card-content{
+    width: 100%;
+    height: 100%;
+    .h3{
+    font-size: 1rem;
+    display: block;
+    font-weight: 500;
+    }
+    .para{
+      font-size: 0.9rem;
+      color: $color;
+      display: block;
+    }
+    .h2{
+      font-family: 1.5rem;
+      display: block;
+      font-weight: 400;
+    }
+    & i{
+      padding:0 0.3rem;
+    }
+  }
+  }
+}
+/*girl*/
+.girl{
+  color: #fff;
+  background-image: url(./images//lg.jpg);
+  @include background1();
+  transition: all 300ms ease-in-out;
+   & h1{
+    text-align: center;
+  padding: 2.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  }
+  &:hover{
+    transform: translate3d(1.1);
+  }
+}
 @media (max-width: 450px) {
   .carousel {
-    width: 100vw;
-    height: 100vh;
-    display: block;
+    
     & .Row {
       margin-bottom: 3rem;
       color: #000;
@@ -151,9 +201,15 @@ left: 2rem;
     }
   }
   .products{
-      padding:  1rem 0;
-      .img-div1,.img-div4{
-        padding: 4rem 0;
+      padding:  1.5rem 0;
+      .card-img1,.card-img4{
+        margin: 2rem 0;
       }
+  }
+  .girl{
+    & h1{
+      padding: 2.5rem 0;
+      letter-spacing: 0;
+    }
   }
 }
