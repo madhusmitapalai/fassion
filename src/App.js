@@ -1,26 +1,38 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
-import Header from "./components/Header";
+//import Header from "./components/Header";
 import Products from "./components/Products";
 import CardContainer from "./components/CardContainer";
-import Girl from "./components/Girl";
+//import Girl from "./components/Girl";
 import Summer from "./components/Summer";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
 //import Testimonial from './components/Testimonial';
 const App = () => {
   return (
-    <div>
-      <Home />
+    <>
+      {/* <Home />
       <Header />
       <Products />
       <CardContainer />
-      <Girl />
       <Summer />
       <Contact />
-      <Footer />
-    </div>
+      <Footer /> */}
+      <Router>
+        <Home />
+        <Switch>
+          <Route exact path="/Header" component={Header} />
+          <Route exact path="/Products" component={Products} />
+
+          <Route exact path="/CardContainer" component={CardContainer} />
+          <Route exact path="/summer" component={Summer} />
+          <Route exact path="/contact" component={Contact} />
+        </Switch>
+      </Router>
+    </>
   );
 };
 

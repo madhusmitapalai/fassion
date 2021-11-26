@@ -7,7 +7,7 @@ import {
   Button,
   FloatingLabel,
 } from "react-bootstrap";
-
+import Footer from "./Footer";
 export const Contact = () => {
   return (
     <div>
@@ -58,6 +58,7 @@ export const Contact = () => {
           </Row>
         </Container>
       </Container>
+      <Footer/>
     </div>
   );
 };

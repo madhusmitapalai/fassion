@@ -1,9 +1,11 @@
 import React from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import imgs from '../images/p8.jpg'
+import Girl from './Girl'
 const Summer = () => {
   return (
     <div>
+    
       <Container className="summer ">
       <h2 className='p-1 text-center'>summer sale</h2>
         <Row>
@@ -26,6 +28,7 @@ const Summer = () => {
           </Col>
         </Row>
       </Container>
+      <Girl/>
     </div>
   );
 };

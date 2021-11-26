@@ -2,6 +2,7 @@ import React from "react";
 import "../index.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import img from "../images/logo.png";
+
 const Home = () => {
   return (
     <div>
@@ -15,16 +16,19 @@ const Home = () => {
             <Navbar.Collapse className="nav-items" id="basic-navbar-nav">
               <Nav className="ms-auto">
                 <Nav className="ms-auto nav-items">
-                  <Nav.Link className="nav-links" href="#home">
+                  <Nav.Link className="nav-links" href="/Header">
                     Home
                   </Nav.Link>
-                  <Nav.Link className="nav-links" href="#products">
+                  <Nav.Link className="nav-links" href="/Products">
                     products
                   </Nav.Link>
-                  <Nav.Link className="nav-links" href="#special">
+                  <Nav.Link className="nav-links" href="/CardContainer">
                     special
                   </Nav.Link>
-                  <Nav.Link className="nav-links" href="#contact">
+                  <Nav.Link className="nav-links" href="/Summer">
+                    offer
+                  </Nav.Link>
+                  <Nav.Link className="nav-links" href="/Contact">
                     contact
                   </Nav.Link>
                 </Nav>
