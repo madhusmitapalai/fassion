@@ -9,6 +9,10 @@
 }
 
 /*mixin*/
+body {
+  overflow-x: hidden;
+}
+
 .Navbar .nav-items .nav-links {
   margin-right: 2.1rem;
   color: #000 !important;
@@ -233,6 +237,7 @@
 /*girl*/
 .main-girl {
   position: relative;
+  padding: 2rem 0;
   overflow: hidden;
 }
 
@@ -348,6 +353,9 @@
   .products .card-img1,
   .products .card-img4 {
     margin: 2rem 0;
+  }
+  .main-girl {
+    padding: 0;
   }
   .girl h1 {
     padding: 2.5rem 0;

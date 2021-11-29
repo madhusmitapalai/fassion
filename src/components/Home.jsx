@@ -28,6 +28,9 @@ const Home = () => {
                   <Nav.Link className="nav-links" href="/Summer">
                     offer
                   </Nav.Link>
+                  <Nav.Link className="nav-links" href="/Testimonial">
+                    Testimonial
+                  </Nav.Link>
                   <Nav.Link className="nav-links" href="/Contact">
                     contact
                   </Nav.Link>

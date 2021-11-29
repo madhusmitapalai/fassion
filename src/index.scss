@@ -23,6 +23,9 @@ $color: rgb(245, 87, 87);
   width: 100%;
   object-fit: cover;
 }
+body{
+  overflow-x: hidden;
+}
 .Navbar .nav-items .nav-links {
   margin-right: 2.1rem;
   color: #000 !important;

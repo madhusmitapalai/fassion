@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 //import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
+import Testimonial from "./components/Testimonia/Testimonial";
 //import Testimonial from './components/Testimonial';
 const App = () => {
   return (
@@ -28,8 +29,9 @@ const App = () => {
           <Route exact path="/Products" component={Products} />
 
           <Route exact path="/CardContainer" component={CardContainer} />
-          <Route exact path="/summer" component={Summer} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/Summer" component={Summer} />
+          <Route exact path="/Testimonial" component={Testimonial} />
+          <Route exact path="/Contact" component={Contact} />
         </Switch>
       </Router>
     </>
